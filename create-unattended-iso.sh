@@ -55,14 +55,14 @@ echo
 while true; do
     echo " which ubuntu edition would you like to remaster:"
     echo
-    echo "  [1] Ubuntu 12.04.4 LTS Server amd64 - Precise Pangolin"
-    echo "  [2] Ubuntu 14.04 LTS Server amd64 - Trusty Tahr"
+    echo "  [1] Ubuntu 12.04.5 LTS Server amd64 - Precise Pangolin"
+    echo "  [2] Ubuntu 14.04.2 LTS Server amd64 - Trusty Tahr"
     echo
     read -p " please enter your preference: [1|2]: " ubver
     case $ubver in
-        [1]* )  download_file="ubuntu-12.04.4-server-amd64.iso"           # filename of the iso to be downloaded
+        [1]* )  download_file="ubuntu-12.04.5-server-amd64.iso"           # filename of the iso to be downloaded
                 download_location="http://releases.ubuntu.com/12.04/"     # location of the file to be downloaded
-                new_iso_name="ubuntu-12.04.4-server-amd64-unattended.iso" # filename of the new iso file to be created
+                new_iso_name="ubuntu-12.04.5-server-amd64-unattended.iso" # filename of the new iso file to be created
                 break;;
         [2]* )  download_file="ubuntu-14.04.2-server-amd64.iso"             # filename of the iso to be downloaded
                 download_location="http://releases.ubuntu.com/14.04/"     # location of the file to be downloaded
@@ -73,8 +73,8 @@ while true; do
 done
 
 # ask the user questions about his/her preferences
-read -ep " please enter your preferred timezone: " -i "Europe/Amsterdam" timezone
-read -ep " please enter your preferred username: " -i "netson" username
+read -ep " please enter your preferred timezone: " -i "Europe/Stockholm" timezone
+read -ep " please enter your preferred username: " -i "ubuntu" username
 read -sp " please enter your preferred password: " password
 printf "\n"
 read -sp " confirm your preferred password: " password2
